@@ -6,7 +6,7 @@ public class Calculation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[] allNumbers = {}, tempArr = {};
+        int[] allNumbers = {};
         int number = 0, pos = 0;
 
 
@@ -14,11 +14,9 @@ public class Calculation {
         while (!scanner.hasNext("q")){
             number = scanner.nextInt();
 
+            allNumbers = Arrays.copyOf(allNumbers, allNumbers.length + 1);
+            allNumbers[pos] = number;
 
-            tempArr = Arrays.copyOf(tempArr, tempArr.length + 1);
-            tempArr[pos] = number;
-
-            allNumbers = Arrays.copyOf(tempArr, tempArr.length);
             pos++;
         }
         System.out.println(Arrays.toString(allNumbers));
