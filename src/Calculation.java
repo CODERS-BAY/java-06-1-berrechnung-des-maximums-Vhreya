@@ -10,8 +10,6 @@ public class Calculation {
         int[] temp = {0};
         int number = 0;
         int pos = 0;
-        int count = 1;
-        int idx = 0;
 
         /*while (!scanner.hasNext("q")) {
             number = scanner.nextInt();
@@ -24,7 +22,7 @@ public class Calculation {
 
         while (!scanner.hasNext("q")) {
             number = scanner.nextInt();
-            allNumbers = new int[count];
+            allNumbers = new int[pos + 1];
 
             for (int i = 0; i < allNumbers.length - 1; i++) {
                 allNumbers[i] = temp[i];
@@ -32,8 +30,6 @@ public class Calculation {
             allNumbers[pos] = number;
             temp = allNumbers;
 
-
-            count++;
             pos++;
         }
 
